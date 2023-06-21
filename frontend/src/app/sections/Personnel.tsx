@@ -7,8 +7,10 @@ interface PersonnelProps {
 // - Site some technologies familiar with 
 function Personnel({}:PersonnelProps) {
     return (
-        <div className="mt-[84px] h-screen border border-red-600">
-           Personnel
+        <div className="h-screen">
+            <div className="flex mt-[84px] h-[calc(100%-84px)] border border-red-600">
+                <h2 className="text-md">hi</h2>
+            </div>
         </div>
     );
 };
