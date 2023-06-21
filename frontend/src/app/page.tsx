@@ -1,8 +1,9 @@
-import Navbar from './components/Navbar/Navbar'
-import Personnel from './components/Personnel'
-import Education from './components/Education'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+
+import Contact from './sections/Contact'
+import Education from './sections/Education'
+import Navbar from './sections/Navbar/Navbar'
+import Personnel from './sections/Personnel'
+import Projects from './sections/Projects'
 
 export default function Home() {
   return (

@@ -5,6 +5,7 @@ import {RxHamburgerMenu} from "react-icons/rx"
 import NavbarMobileMenu from './components/NavbarMobileMenu';
 import { useScroll } from './hooks/use-scroll';
 import clsx from 'clsx';
+import IconLogo from '@/icons/IconLogo';
 
 interface NavbarProps {
 
@@ -20,9 +21,6 @@ function Navbar({}:NavbarProps) {
     const [showMobileView, setShowMobileView] = useState<boolean>(false);
     const toggleMobileMenu = ()=>setShowMobileView(!showMobileView);
     const {hideNavbar} = useScroll();
-    useEffect(()=>{
-        console.log(hideNavbar)
-    },[hideNavbar])
     const routes:Route[]=[
         {
             name:"Home",
@@ -38,21 +36,21 @@ function Navbar({}:NavbarProps) {
         },
         {
             name:"Contact",
-            href:"#cContact"
+            href:"#contact"
         },
     ]
 
     return (
     <>
         <nav className={clsx(
-            "w-[calc(100%-2.5rem)] z-40 fixed py-5 left-0 right-0 mx-auto h-[64px]  rounded-b-sm border-b-[1px] border-b-greenish-blue transition-all duration-200  ", 
-            hideNavbar ? "-translate-y-20 ":"bg-navy"
+            "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200     ", 
+            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md ":" bg-navy shadow-md"
         )}
         >
-            <div className="flex flex-row items-center justify-between" >
+            <div className="flex flex-row items-center justify-between px-5 " >
                 {/* Logo */}
-                <div className="flex-1 h-4 w-4">
-                    Logo
+                <div className="h-12 w-12 bg-transparent text-greenish-blue">
+                    <IconLogo /> 
                 </div>
 
                 {/* right  display*/}

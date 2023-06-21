@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from '../Navbar';
-import Drawer from '../../Drawer/Drawer';
 import NavbarItem from './NavbarItem';
+import Drawer from '@/app/components/Drawer/Drawer';
 
 interface NavbarMobileMenuProps {
     onClose: ()=>void
