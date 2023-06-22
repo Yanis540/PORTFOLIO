@@ -6,7 +6,7 @@ const useScroll=()=>{
     const [hideNavbar, setHideNavbar] = useState<boolean>(false);
     const lastScrollTop = useRef(0)
     useEffect(()=>{
-        const TOP_OFFSET = 0.7*screen.height ; 
+        const TOP_OFFSET = 0.5*screen.height ; 
 
         const handleScroll=()=>{
             var st = window.scrollY || TOP_OFFSET; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"

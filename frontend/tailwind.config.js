@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +8,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // that is animation class
+      animation: {
+        "fade-in-bottom": 'fade-in-bottom 2s forwards ',
+      },
+      // that is actual animation
+      keyframes: {
+        "fade-in-bottom": {
+          '0%': { opacity:"0",transform:'translateY(50px)'  },
+          '100%': { opacity:"1",transform:'translateY(0px)'},
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -24,5 +36,21 @@ module.exports = {
       }
     },
   },
-  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      );
+    }), 
+  ],
 }

@@ -11,7 +11,7 @@ export default function Home() {
   const heroRef = useBackground()
   return (
     <>
-      <div className="flex flex-col min-h-screen h-full px-5 bg-navy relative ">
+      <div className="flex flex-col min-h-screen h-full px-5 bg-navy relative overflow-x-hidden ">
       {/* <div ref={heroRef} className="flex flex-col min-h-screen h-full px-5 bg-navy relative  hero "> */}
         {/* 
           Navbar : 
@@ -22,7 +22,7 @@ export default function Home() {
           -! Description about my self 
           - Site some technologies familiar with 
         */}
-        
+        <main className="mx-auto px-5 max-w-[1800px]">
         <Personnel /> 
         {
           Array.from({length:50}).map((_,index)=>(
@@ -38,6 +38,7 @@ export default function Home() {
         
         {/* Contact Section */}
         <Contact /> 
+        </main>
 
       </div>
     </>

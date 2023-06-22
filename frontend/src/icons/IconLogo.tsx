@@ -19,8 +19,8 @@ const IconLogo = () => (
       />
     </g>
     <g>
-      <path d="M35.413153,27L50,44.688027L63.237773,26.999999" transform="translate(.000001 0.000001)" fill="none" stroke="currentColor" strokeWidth="2"/>
-      <path d="M50.000001,44.688028L50,72.166825" fill="none" stroke="currentColor" strokeWidth="2"/>
+      <path d="M35.413153,27L50,44.688027L63.237773,26.999999" transform="translate(.000001 0.000001)" fill="none" stroke="currentColor" strokeWidth="5"/>
+      <path d="M50.000001,44.688028L50,72.166825" fill="none" stroke="currentColor" strokeWidth="5"/>
     </g>
   </svg>
 
