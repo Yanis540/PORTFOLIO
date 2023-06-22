@@ -11,11 +11,16 @@ module.exports = {
       // that is animation class
       animation: {
         "fade-in-bottom": 'fade-in-bottom 2s forwards ',
+        "mini-fade-in-bottom": 'mini-fade-in-bottom 1s forwards ',
       },
       // that is actual animation
       keyframes: {
         "fade-in-bottom": {
           '0%': { opacity:"0",transform:'translateY(50px)'  },
+          '100%': { opacity:"1",transform:'translateY(0px)'},
+        },
+        "mini-fade-in-bottom": {
+          '0%': { opacity:"0",transform:'translateY(5px)'  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
       },

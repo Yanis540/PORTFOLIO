@@ -6,6 +6,7 @@ import Navbar from './sections/Navbar/Navbar'
 import Personnel from './sections/Personnel'
 import Projects from './sections/Projects'
 import { useBackground } from './hooks/use-background'
+import FooterLayout from './components/Layout/FooterLayout'
 
 export default function Home() {
   const heroRef = useBackground()
@@ -23,22 +24,23 @@ export default function Home() {
           - Site some technologies familiar with 
         */}
         <main className="mx-auto px-5 max-w-[1800px]">
-        <Personnel /> 
-        {
-          Array.from({length:50}).map((_,index)=>(
-            <h3 key={index}>hilaw</h3>
-          ))
-        }
-        {/* 
-          - Eduationnal background // INSPIRE BY this : https://v4.brittanychiang.com (0.2 where i have worked )
-        */}
-        <Education /> 
-        {/* Projects Section */}
-        <Projects /> 
-        
-        {/* Contact Section */}
-        <Contact /> 
+          <Personnel /> 
+          {
+            Array.from({length:50}).map((_,index)=>(
+              <h3 key={index}>hi</h3>
+            ))
+          }
+          {/* 
+            - Eduationnal background // INSPIRE BY this : https://v4.brittanychiang.com (0.2 where i have worked )
+          */}
+          <Education /> 
+          {/* Projects Section */}
+          <Projects /> 
+          
+          {/* Contact Section */}
+          <Contact /> 
         </main>
+        <FooterLayout /> 
 
       </div>
     </>

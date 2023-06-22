@@ -49,7 +49,7 @@ function Navbar({}:NavbarProps) {
         >
             <div className="flex flex-row items-center justify-between px-5 " >
                 {/* Logo */}
-                <div className="h-12 w-12 bg-transparent text-greenish-blue">
+                <div className="h-12 w-12 bg-transparent text-greenish-blue opacity-0 animate-mini-fade-in-bottom animation-delay-[50ms]">
                     <IconLogo /> 
                 </div>
 
