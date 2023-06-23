@@ -38,7 +38,7 @@ function FooterLayout({}:FooterLayoutProps) {
            </div>
             {/* Right side */}
 
-           <div className="flex flex-col items-center justify-end h-full relative  ">
+           <div className="flex flex-col items-center justify-end h-full relative translate-x-[45%]  ">
                 <div className="flex flex-col items-center mb-28 rotate-[90deg] text-lightest-slate text-sm ">
                     <Link href="mailto:yanistabellout4@gmail.com">yanistabellout4@gmail.com</Link>
                 </div>

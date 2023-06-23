@@ -1,17 +1,15 @@
 import React from 'react';
 import Button from '../components/Button/Button';
-import Diamond from '../components/Lottie/Diamond';
 
 interface PersonnelProps {
 
 };
 // -! Description about my self 
-// - Site some technologies familiar with 
 function Personnel({}:PersonnelProps) {
     return (
         <section className="h-[calc(85vh)] md:h-screen mx-auto">
             <div className="flex flex-row items-start md:items-center justify-around  mt-[84px] h-[calc(100%-84px)]  ">
-                <div className="flex-1 flex flex-col gap-[20px] items-start pl-0 md:pl-5 lg:pl-14   justify-center  mx-w-[1200px] h-full">
+                <div className="flex-1 flex flex-col gap-[20px] items-start  justify-center pl-0 md:pl-5 lg:pl-14 h-full relative z-10">
                     <span className=" text-greenish-blue text-md font-bold opacity-0 animate-fade-in-bottom animation-delay-[100ms]">Hi, my name is </span>
                     <h1 className="text-lightest-slate text-4xl lg:text-8xl xl:text-12xl font-bold opacity-0 animate-fade-in-bottom animation-delay-[400ms] ">Yanis Tabellout.</h1>
                     <h2 className="text-slate text-4xl lg:text-8xl xl:text-12xl font-bold opacity-0 animate-fade-in-bottom animation-delay-[700ms]">Passionate about computers.</h2>
@@ -44,5 +42,13 @@ function Personnel({}:PersonnelProps) {
         </section>
     );
 };
-
+// text-greenish-blue py-4 px-8 border-[1px] rounded-md   relative
+// border-greenish-blue bg-navy  text-shadow box-shadow 
+// hover:translate-x-[-10px] hover:translate-y-[-10px] 
+// before:absolute before:w-full before:h-full before:border-[1px] 
+// before:border-blue-400 before:top-0 before:right-0 
+// before:left-0 before:bottom-0  before:rounded-md before:z-[-1]
+// before:opacity-0 
+// hover:before:opacity-100 hover:before:translate-x-[10px] hover:before:translate-y-[10px]
+// transition-all duration-500 
 export default Personnel;

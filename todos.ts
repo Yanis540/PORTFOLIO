@@ -5,14 +5,14 @@
 !   -   FooterLayout : 
 ?       -   animate the footer layout more 
 !   -   Education page 
-?       -   Background as a student 
-?       -   Background as web developper
-?       -   Background as a IA enthousiast 
+todo    -   Background as a student 
+todo    -   Background as web developper
+todo    -   Background as a IA enthousiast 
 !   -   Projects 
-?       -   Projects 
+todo    -   Projects 
  
 !   -   Contacr 
-?       -   Contact page 
+todo    -   Contact page 
  
 
 

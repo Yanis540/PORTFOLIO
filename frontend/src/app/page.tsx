@@ -7,6 +7,7 @@ import Personnel from './sections/Personnel'
 import Projects from './sections/Projects'
 import { useBackground } from './hooks/use-background'
 import FooterLayout from './components/Layout/FooterLayout'
+import About from './sections/About/About'
 
 export default function Home() {
   const heroRef = useBackground()
@@ -19,20 +20,16 @@ export default function Home() {
           - hide when ur scrolling down 
         */}
         <Navbar /> 
-        {/** 
-          -! Description about my self 
-          - Site some technologies familiar with 
-        */}
-        <main className="mx-auto px-5 max-w-[1800px]">
+    
+        <main className="mx-auto md:px-5 max-w-[1200px]">
           <Personnel /> 
-          {
-            Array.from({length:50}).map((_,index)=>(
-              <h3 key={index}>hi</h3>
-            ))
-          }
           {/* 
-            - Eduationnal background // INSPIRE BY this : https://v4.brittanychiang.com (0.2 where i have worked )
+            - About 
+            -! Description about my self 
+            - Site some technologies familiar with 
           */}
+          <About /> 
+          {/* - Eduationnal background // INSPIRE BY this : https://v4.brittanychiang.com (0.2 where i have worked )*/}
           <Education /> 
           {/* Projects Section */}
           <Projects /> 
