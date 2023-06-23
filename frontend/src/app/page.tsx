@@ -13,7 +13,7 @@ export default function Home() {
   const heroRef = useBackground()
   return (
     <>
-      <div className="flex flex-col min-h-screen h-full px-5 bg-navy relative overflow-x-hidden ">
+      <div className="flex flex-col min-h-screen h-full px-5 bg-navy w-full relative overflow-x-hidden overflow-y-hidden">
       {/* <div ref={heroRef} className="flex flex-col min-h-screen h-full px-5 bg-navy relative  hero "> */}
         {/* 
           Navbar : 

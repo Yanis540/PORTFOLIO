@@ -13,12 +13,12 @@ interface AboutProps {
 function About({}:AboutProps) {
     const {ref,hasIntersected} = useIntersectionObserver();
     return (
-        <div ref={ref} className="h-full  md:h-screen mx-auto " >
-            <div className={clsx(
+        <section className="h-full md:min-h-screen mx-auto flex flex-col justify-center overflow-y-hidden" >
+            <div  ref={ref} className={clsx(
                 `
-                    flex flex-col justify-center md:items-start gap-[20px] opacity-0 
-                    pl-0 md:pl-5 lg:pl-20
-                    translate-y-full transition-all duration-[1500ms] ease-in-out  
+                    flex flex-col justify-center md:items-start gap-[20px]
+                    pl-0 md:pl-5 lg:pl-20 
+                    opacity-0 animate-big-fade-in-bottom 
                 `,
                 hasIntersected&&"opacity-100 translate-y-0  "
             )}>
@@ -34,7 +34,7 @@ function About({}:AboutProps) {
 
                 </div>
            </div>
-        </div>
+        </section>
     );
 };
 

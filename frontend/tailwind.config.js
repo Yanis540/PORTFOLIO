@@ -11,7 +11,9 @@ module.exports = {
       // that is animation class
       animation: {
         "fade-in-bottom": 'fade-in-bottom 2s forwards ',
+        "big-fade-in-bottom": 'bigg-fade-in-bottom 5s forwards ',
         "mini-fade-in-bottom": 'mini-fade-in-bottom 1s forwards ',
+        "mini-fade-in-top": 'mini-fade-in-top 0.5s forwards ',
       },
       // that is actual animation
       keyframes: {
@@ -19,8 +21,16 @@ module.exports = {
           '0%': { opacity:"0",transform:'translateY(50px)'  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
+        "bigg-fade-in-bottom": {
+          '0%': { opacity:"0",transform:'translateY(500px)'  },
+          '100%': { opacity:"1",transform:'translateY(0px)'},
+        },
         "mini-fade-in-bottom": {
           '0%': { opacity:"0",transform:'translateY(5px)'  },
+          '100%': { opacity:"1",transform:'translateY(0px)'},
+        },
+        "mini-fade-in-top": {
+          '0%': { opacity:"0",transform:'translateY(-15px)'  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
       },
