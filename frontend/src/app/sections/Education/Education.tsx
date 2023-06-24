@@ -29,7 +29,7 @@ function Education({}:EducationProps) {
             <div   className={clsx(
                 `
                     flex flex-col justify-center md:items-start gap-[40px] py-4
-                    pl-0 md:pl-16 lg:pl-30  
+                    pl-0 md:pl-20 lg:pl-40  
                     opacity-0  
                 `,
                 hasIntersected&&"opacity-100 translate-y-0 animate-big-fade-in-bottom "

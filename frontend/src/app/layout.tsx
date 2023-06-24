@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, ' text-whitish scrollbar-thin scrollbar-thumb-greenish-blue scrollbar-track-navy scrollbar-rounded-md relative')}>
+      <body className={clsx(inter.className, ' max-w-[100vw] text-whitish scrollbar-thin scrollbar-thumb-greenish-blue scrollbar-track-navy scrollbar-rounded-md relative')}>
         <>
           {children}
         </>
