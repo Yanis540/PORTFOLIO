@@ -46,7 +46,6 @@ const useEducation :() => ([EducationalContent[] , ((contentId: EducationContent
                 "Advanced concepts in data structures, databases, web developpement, Operating systems, computer architecture and system design ",
                 "Learned Java, JavaScript, PHP, Assembly and SQL",
                 "Worked with Linux",
-                "", 
                 "Custom shopping desktop application for users with admin dashboard using Java", 
                 "Website for university's club",
             ],
