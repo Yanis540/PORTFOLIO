@@ -6,6 +6,7 @@ import NavbarMobileMenu from './components/NavbarMobileMenu';
 import { useScroll } from './hooks/use-scroll';
 import clsx from 'clsx';
 import IconLogo from '@/icons/IconLogo';
+import {Link} from 'react-scroll';
 
 interface NavbarProps {
 
@@ -14,6 +15,7 @@ interface NavbarProps {
 export type Route = {
     name:string 
     href: string
+    delay:string
 }
 // Navbar : 
 // - hide when ur scrolling down 
@@ -23,20 +25,24 @@ function Navbar({}:NavbarProps) {
     const {hideNavbar} = useScroll();
     const routes:Route[]=[
         {
-            name:"Home",
-            href:"/"
+            name:"About",
+            href:"about",
+            delay:"80ms"
         },
         {
             name:"Education",
-            href:"#education"
+            href:"education",
+            delay:"100ms"
         },
         {
             name:"Projects",
-            href:"#projects"
+            href:"projects",
+            delay:"120ms"
         },
         {
             name:"Contact",
-            href:"#contact"
+            href:"contact",
+            delay:"140ms"
         },
     ]
 
@@ -49,9 +55,9 @@ function Navbar({}:NavbarProps) {
         >
             <div className="flex flex-row items-center justify-between px-5 " >
                 {/* Logo */}
-                <div className="h-12 w-12 bg-transparent text-greenish-blue opacity-0 animate-mini-fade-in-bottom animation-delay-[50ms]">
+                <Link to="hero"smooth={true} className="h-12 w-12 bg-transparent text-greenish-blue opacity-0 animate-mini-fade-in-bottom animation-delay-[50ms] cursor-pointer">
                     <IconLogo /> 
-                </div>
+                </Link>
 
                 {/* right  display*/}
                 <div className="hidden md:flex flex-row items-center justify-between gap-6 p-2  ">

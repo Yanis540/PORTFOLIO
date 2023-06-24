@@ -12,7 +12,7 @@ const IconLogo = () => (
           L 89, 28 Z
         " 
         stroke="currentColor"
-        strokeWidth="3"
+        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="transparent"

@@ -10,10 +10,10 @@ module.exports = {
     extend: {
       // that is animation class
       animation: {
-        "fade-in-bottom": 'fade-in-bottom 2s forwards ',
-        "big-fade-in-bottom": 'bigg-fade-in-bottom 5s forwards ',
+        "fade-in-bottom": 'fade-in-bottom 0.5s forwards ',
+        "big-fade-in-bottom": 'big-fade-in-bottom 1.5s forwards ',
         "mini-fade-in-bottom": 'mini-fade-in-bottom 1s forwards ',
-        "mini-fade-in-top": 'mini-fade-in-top 0.5s forwards ',
+        "mini-fade-in-top": 'mini-fade-in-top 0.2s forwards ',
       },
       // that is actual animation
       keyframes: {
@@ -21,8 +21,9 @@ module.exports = {
           '0%': { opacity:"0",transform:'translateY(50px)'  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
-        "bigg-fade-in-bottom": {
-          '0%': { opacity:"0",transform:'translateY(500px)'  },
+        "big-fade-in-bottom": {
+          '0%': { opacity:"0",transform:'translateY(50px)'  },
+          "80%":{ opacity:"0.7"  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
         "mini-fade-in-bottom": {
@@ -30,7 +31,7 @@ module.exports = {
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
         "mini-fade-in-top": {
-          '0%': { opacity:"0",transform:'translateY(-15px)'  },
+          '0%': { opacity:"0",transform:'translateY(-20px)'  },
           '100%': { opacity:"1",transform:'translateY(0px)'},
         },
       },

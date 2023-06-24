@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route } from '../Navbar';
+import {Link} from "react-scroll"
+import clsx from 'clsx';
 
 interface NavbarItemProps {
     route : Route
@@ -8,7 +10,9 @@ interface NavbarItemProps {
 
 function NavbarItem({route,index}:NavbarItemProps) {
     return (
-        <div className="flex flex-row font-mono items-center text-md gap-2 ">
+        <Link 
+            to={route.href} spy={true} smooth={true} 
+            className={clsx("flex flex-row font-mono items-center text-md gap-2 opacity-0 translate-y-0 animate-mini-fade-in-top ",`animation-delay-[${150}ms]`)}>
             <span className="text-greenish-blue ">{index+1}.</span>
             <h2 className="
                 hover:text-greenish-blue 
@@ -16,7 +20,7 @@ function NavbarItem({route,index}:NavbarItemProps) {
             >
                 {route.name}
             </h2>
-        </div>
+        </Link>
     );
 };
 

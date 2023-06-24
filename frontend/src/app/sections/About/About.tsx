@@ -1,4 +1,5 @@
 'use client'
+import {useEffect} from "react"
 import clsx from 'clsx';
 import { useIntersectionObserver } from '../hooks/use-intersection-observer';
 import Technologie from './components/Technologie';
@@ -11,21 +12,22 @@ interface AboutProps {
 };
 
 function About({}:AboutProps) {
-    const {ref,hasIntersected} = useIntersectionObserver();
+
+    const {ref,hasIntersected,inView} = useIntersectionObserver();
     return (
-        <section className="h-full md:min-h-screen mx-auto flex flex-col justify-center overflow-y-hidden" >
-            <div  ref={ref} className={clsx(
+        <section ref={ref} id="about" className="h-full md:h-[90vh] mx-auto flex flex-col justify-start mt-9 " >
+            <div  className={clsx(
                 `
                     flex flex-col justify-center md:items-start gap-[20px]
                     pl-0 md:pl-5 lg:pl-20 
-                    opacity-0 animate-big-fade-in-bottom 
+                    opacity-0 translate-y-0
                 `,
-                hasIntersected&&"opacity-100 translate-y-0  "
+                hasIntersected&&"opacity-100  animate-big-fade-in-bottom "
             )}>
                 {/* Top  */}
-               <HeaderSection section_number={1} title="About me" /> 
+               <HeaderSection  section_number={1} title="About me" /> 
                 {/*Bottom */}
-                <div className="flex flex-col md:flex-row items-center justify-between px-4 w-full">
+                <div   className="flex flex-col md:flex-row items-center justify-between md:px-4 w-full">
                     <GeneralDescription /> 
                     {/* Image or something */}
                     <div className='flex-[0.4] hidden md:flex' >

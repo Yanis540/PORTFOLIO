@@ -5,7 +5,12 @@
 :root {
 
 }
-
+*{
+    /* border:1px solid gray; */
+}
+html,body{
+    scroll-behavior: smooth;
+}
 
 .link-underline {
     border-bottom-width: 0;
