@@ -25,7 +25,7 @@ function Education({}:EducationProps) {
         return ;
     }
     return (
-        <section ref={ref} id="education" className="h-full md:min-h-screen mx-auto flex flex-col justify-start" >
+        <section ref={ref} id="education" className="h-full py-[100px] mx-auto flex flex-col justify-start" >
             <div   className={clsx(
                 `
                     flex flex-col justify-center md:items-start gap-[40px] py-4

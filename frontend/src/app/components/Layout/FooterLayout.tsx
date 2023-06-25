@@ -24,9 +24,7 @@ function FooterLayout({}:FooterLayoutProps) {
            <div className="flex flex-col items-center relative group"> 
                 {/* Links */}
                 <div className={clsx(`
-                        flex flex-col gap-[40px] items-center mb-[20px] relative 
-                        
-                    `,
+                    flex flex-col gap-[40px] items-center mb-[20px] relative `,
                     !isMobile && `translate-y-full opacity-0 group-hover:translate-y-0 
                         group-hover:opacity-100 transition-all duration-[800ms] ease-in 
                         pointer-events-none group-hover:pointer-events-auto`,

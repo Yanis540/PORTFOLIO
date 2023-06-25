@@ -2,11 +2,11 @@
 import {useState , useEffect} from "react"
 
 const useMobile = ()=>{
-    const [isMobile, setIsMobile] = useState(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+    const [isMobile, setIsMobile] = useState(  typeof navigator!="undefined"? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent):false);
 
     useEffect(() => {
       const handleResize = () => {
-        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+        setIsMobile(typeof navigator!="undefined"? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent):false);
       };
   
       window.addEventListener('resize', handleResize);

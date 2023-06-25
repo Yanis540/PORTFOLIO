@@ -15,7 +15,7 @@ function HeaderSection({title,section_number,wfull=false}:HeaderSectionProps) {
             <div className="flex flex-row items-center text-2xl md:text-4xl  gap-2 ">
                 <span className="text-greenish-blue ">{section_number}.</span>
                 <h2 className="
-                    hover:text-greenish-blue 
+                    text-lightest-slate hover:text-greenish-blue 
                     cursor-pointer "
                 >
                     {title}

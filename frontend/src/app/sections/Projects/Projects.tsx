@@ -1,17 +1,18 @@
-'use client'
+import React from 'react';
+import HeaderSection from '../../components/Header/HeaderSection';
 import clsx from 'clsx';
 import { useIntersectionObserver } from '../hooks/use-intersection-observer';
-import HeaderSection from '@/app/components/Header/HeaderSection';
-import GeneralDescription from './components/GeneralDescription';
-import LottieAnimation from '@/app/components/Lottie/LottieAnimation';
+import { useProjects } from './hooks/use-projects';
+import Project from './components/Project';
+import Image from 'next/image';
 
-interface AboutProps {
+interface ProjectsProps {
 
 };
 
-function About({}:AboutProps) {
-
+function Projects({}:ProjectsProps) {
     const {ref,hasIntersected} = useIntersectionObserver();
+    const projects = useProjects();
     return (
         <section ref={ref} id="about" className="h-full py-[100px] mx-auto flex flex-col justify-start mt-9 " >
             <div  className={clsx(
@@ -23,14 +24,14 @@ function About({}:AboutProps) {
                 hasIntersected&&"opacity-100  animate-big-fade-in-bottom "
             )}>
                 {/* Top  */}
-               <HeaderSection  section_number={1} title="About me" /> 
+               <HeaderSection  section_number={3} title="Projects" /> 
                 {/*Bottom */}
-                <div   className="flex flex-col md:flex-row items-center justify-between md:px-4 w-full">
-                    <GeneralDescription /> 
-                    {/* Image or something */}
-                    <div className='flex-[0.4] hidden md:flex' >
-                        <LottieAnimation type="diamond"/> 
-                    </div>
+                <div   className="flex flex-col items-start gap-[15px] md:px-4 w-full">
+                    {
+                        projects.map((project,index)=>(
+                            <Project key={index} project= {project} left={index%2==1 } /> 
+                        ))
+                    }
 
                 </div>
            </div>
@@ -38,4 +39,4 @@ function About({}:AboutProps) {
     );
 };
 
-export default About;
+export default Projects;

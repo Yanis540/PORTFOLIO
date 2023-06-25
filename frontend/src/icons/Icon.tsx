@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import {FiGithub,FiTwitter,FiLinkedin} from "react-icons/fi"
 import {PiGithubLogo,PiTwitterLogo,PiLinkedinLogo} from "react-icons/pi"
 interface IconProps {
-    type:"twitter"|"github"|"linkedin"
+    type:"twitter"|"github"|"linkedin"|"external"
     className ? : string 
 };
 

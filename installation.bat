@@ -4,4 +4,6 @@ npm i animejs react-helmet
 npm i --save-dev @types/animejs
 npm i --save-dev @types/react-helmet 
 npm install react-intersection-observer --save
-npm i react-scroll
+npm i react-scroll 
+npm i scrollreveal
+npm i --save-dev @types/scrollreveal
