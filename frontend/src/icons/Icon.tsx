@@ -1,22 +1,25 @@
 import React from 'react';
 
-import clsx from 'clsx';
 import {FiGithub,FiTwitter,FiLinkedin} from "react-icons/fi"
 import {PiGithubLogo,PiTwitterLogo,PiLinkedinLogo} from "react-icons/pi"
+import {BiLinkExternal} from "react-icons/bi"
 interface IconProps {
-    type:"twitter"|"github"|"linkedin"|"external"
+    name:IconName
     className ? : string 
 };
+export type IconName = "twitter"|"github"|"linkedin"|"external"
 
-function Icon({type,className=""}:IconProps) {
+function Icon({name,className=""}:IconProps) {
     const ChoosenIcon = ()=>{
-        switch(type){
+        switch(name){
             case "twitter":
                 return PiTwitterLogo
             case "github":
                 return PiGithubLogo
             case "linkedin":
                 return PiLinkedinLogo
+            case "external":
+                return BiLinkExternal
             default :
                 return PiLinkedinLogo
         }

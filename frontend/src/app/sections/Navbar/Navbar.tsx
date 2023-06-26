@@ -49,9 +49,8 @@ function Navbar({}:NavbarProps) {
     return (
     <>
         <nav className={clsx(
-            "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200    ", 
-            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md ":" backdrop-blur-lg shadow-b-xl",
-            "before:absolute before:w-full before:h-full before:rounded-b-sm before:bg-navy before:opacity-40"
+            "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200", 
+            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md":"backdrop-blur-lg shadow-b-lg",
         )}
         >
             <div className="flex flex-row items-center justify-between px-5 " >
@@ -70,7 +69,7 @@ function Navbar({}:NavbarProps) {
                 </div>
                 <div
                     onClick={toggleMobileMenu}
-                    className='flex md:hidden flex-row items-center gap-2 cursor-pointer '
+                    className='flex md:hidden flex-row items-center gap-2 cursor-pointer'
                 >   
                     <RxHamburgerMenu className=" hover:text-greenish-blue transition-all duration-300 " size={30} /> 
                 </div>

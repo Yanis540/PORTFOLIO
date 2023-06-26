@@ -49,6 +49,9 @@ module.exports = {
         "lightest-slate":"#ccd6f6", 
         "whitish":"#e6f1ff", 
         "greenish-blue":"#64ffda", 
+      },
+      boxShadow:{
+        'navy-shdow':'rgba(2,12,27,0.7);'
       }
     },
   },

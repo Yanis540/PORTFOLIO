@@ -17,7 +17,7 @@ export default function Home() {
       {/* <div ref={heroRef} className="flex flex-col min-h-screen h-full px-5 bg-navy relative  hero "> */}
 
         <Navbar /> 
-        <main className="mx-auto md:px-5 max-w-[1200px]">
+        <main className="mx-auto px-1 sm:px-2 md:px-5 max-w-[1200px]">
           <Personnel /> 
 
           <About /> 

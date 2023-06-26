@@ -29,9 +29,9 @@ function FooterLayout({}:FooterLayoutProps) {
                         group-hover:opacity-100 transition-all duration-[800ms] ease-in 
                         pointer-events-none group-hover:pointer-events-auto`,
                 )}>
-                    <Link target='_blank' href="https://github.com/Yanis540"  > <Icon type='github' /></Link> 
-                    <Link target='_blank' href="https://www.linkedin.com/in/yanis-tabellout-323a64254/"><Icon type='linkedin' /></Link> 
-                    <Link target='_blank' href="https://twitter.com/yanis5401"><Icon type='twitter' /></Link> 
+                    <Link target='_blank' href="https://github.com/Yanis540"  > <Icon name='github' /></Link> 
+                    <Link target='_blank' href="https://www.linkedin.com/in/yanis-tabellout-323a64254/"><Icon name='linkedin' /></Link> 
+                    <Link target='_blank' href="https://twitter.com/yanis5401"><Icon name='twitter' /></Link> 
                 </div>
                 {/* Bar */}
                 <div className={clsx(`

@@ -1,3 +1,4 @@
+import { IconName } from "@/icons/Icon"
 
 
 
@@ -6,11 +7,17 @@ export type Project ={
     description ?: string 
     resume : string 
     technologies:string[]
-    github_repo ?: string 
-    deployed_link ?: string 
+    links :Link[]
+  
     photo : string
 
 }
+type Link = {
+    title : string 
+    name:IconName , 
+    url: string
+} 
+
 
 const useProjects = ()=>{
     const projects: Project[]=[
@@ -26,8 +33,10 @@ const useProjects = ()=>{
                 using the famous RSA algorithm.
             `,
             technologies:["TypeScript","React","NodeJs & Express","Prisma","PostgresSql","Vercel", "Pusher",'TailWindCss',"Deep learning","RSA"],
-            deployed_link:"https://pfe-frontend-rose.vercel.app",
-            photo:"/images/face_recognition.jpg"
+            links : [
+                {title:"deployed",name:"external",url:"https://pfe-frontend-rose.vercel.app"},
+            ],
+            photo:"/images/halcyon.avif"//"/images/face_recognition.jpg"
         },
         {
             title:"Chat Application ",
@@ -38,16 +47,19 @@ const useProjects = ()=>{
                 use as many reusable components as possible.
             `,
             technologies:["React","NodeJs & Express","Mongodb","Socket.IO",'TailWindCss'],
-            github_repo:"https://github.com/Yanis540/CHAT-APPLICATION",
+            links : [
+                {title:"Github Repo",name:"github",url:"https://github.com/Yanis540/CHAT-APPLICATION"},
+            ],
             photo:"/images/Chat-App.PNG"
 
         },
         {
             title:"Online Store",
-            resume:`An online store to pass commands online for a client.
-            `,
+            resume:`An online store to pass commands online for a client.`,
             technologies:["Wordpress","PHP",'MySQL'],
-            github_repo:"https://dev-naz-shop.pantheonsite.io",
+            links : [
+                {title:"Deployed",name:"external",url:"https://dev-naz-shop.pantheonsite.io"},
+            ],
             photo:"/images/wordpress.PNG"
 
         },
@@ -56,7 +68,9 @@ const useProjects = ()=>{
             resume:`An online store using the latest technologies. The goal of this project was to familiarize with the NextJS environment  
             `,
             technologies:["NextJs",'Next Auth',"Prisma",'PostgreSql'],
-            github_repo:"https://dev-naz-shop.pantheonsite.io",
+            links : [
+                {title:"Github Repo",name:"external",url:"https://next-js-e-commerce-pink-six.vercel.app"},
+            ],
             photo:"/images/e-commerce2.PNG"
             
         },
