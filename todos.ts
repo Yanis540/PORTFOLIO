@@ -1,18 +1,19 @@
 /*
 
-
+!   -   Rework on transition by using the useTransition hook instead of useIntersectionObserver
+!   -   Do the animation stuff when the page loads :D 
 !   -   Add icons to link in the sides 
 !   -   FooterLayout : 
 ?       -   animate the footer layout more 
 !   -   Education page 
-todo    -   Background as a student 
-todo    -   Background as web developper
-todo    -   Background as a IA enthousiast 
+?       -   Background as a student 
+?       -   Background as web developper
+?       -   Background as a IA enthousiast 
 !   -   Projects 
-todo    -   Projects 
+?       -   Projects 
  
 !   -   Contacr 
-todo    -   Contact page 
+?       -   Contact page 
  
 
 

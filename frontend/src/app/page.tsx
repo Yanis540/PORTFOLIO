@@ -8,11 +8,12 @@ import Projects from './sections/Projects/Projects'
 import { useBackground } from './hooks/use-background'
 import FooterLayout from './components/Layout/FooterLayout'
 import About from './sections/About/About'
-
+import { QueryClientProvider ,QueryClient} from '@tanstack/react-query'
 export default function Home() {
   const heroRef = useBackground()
+  const queryClient = new QueryClient();
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-screen h-full px-[10px] md:px-5 bg-navy w-full relative max-w-[100vw] overflow-y-hidden">
       {/* <div ref={heroRef} className="flex flex-col min-h-screen h-full px-5 bg-navy relative  hero "> */}
 
@@ -31,6 +32,6 @@ export default function Home() {
         <FooterLayout /> 
 
       </div>
-    </>
+    </QueryClientProvider>
   )
 }

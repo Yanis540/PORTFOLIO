@@ -29,7 +29,7 @@ function ProjectDesktop({project,left}:ProjectDesktopProps) {
                     <h3 className="text-greenish-blue font-mono font-semibold text-lg">Feature project</h3>
                     <h2 className="font-bold text-whitish text-2xl capitalize">{project.title}</h2>
                     <div className="flex-flex-col gap-[10px] w-full">
-                        <div className="w-full p-4 bg-light-navy rounded shadow-xl hover:shadow-2xl transition-all duration-150 ">
+                        <div className="w-full p-4 bg-light-navy hover:scale-[1.01] rounded shadow-xl hover:shadow-2xl transition-all duration-300 ">
                             <p className="text-light-slate">{project.resume}</p>
                         </div>
                         <div className={clsx(`
@@ -62,8 +62,8 @@ function ProjectDesktop({project,left}:ProjectDesktopProps) {
                         } 
                         target='_blank' 
                         className="
-                            flex-[0.5] flex flex-col  relative rounded-lg 
-                            transition-all duration-300 bg-[#0aefff] ease-in-out
+                            flex-[0.5] flex flex-col  relative rounded-lg hover:scale-[1.01]
+                            transition-all duration-300 bg-[#0aefff] ease-in-out hover:bg-transparent
                             before:absolute before:w-full before:h-full hover:contrast-100
                             before:bg-navy before:rounded-lg before:mix-blend-screen 
                             hover:before:bg-transparent 

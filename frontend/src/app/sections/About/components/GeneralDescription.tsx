@@ -6,8 +6,8 @@ interface GeneralDescriptionProps {
 };
 
 function GeneralDescription({}:GeneralDescriptionProps) {
-    const web_technologies_left = ['Javascript','Python','React','NodeJs']
-    const web_technologies_right = ['TypeScript','SQL','NextJs','Django']
+    const web_technologies_left = ['Javascript','Python','React','NodeJs','GraphQL','PostgreSql',"firebase"]
+    const web_technologies_right = ['TypeScript','SQL','NextJs','Django','tRPC','MySql','Mongodb']
     const ia_technologies_left = ['Tensorflow','Pytorch','Keras']
     const ia_technologies_right = ['Scikit-learn','Pandas','Matplotlib']
     return (

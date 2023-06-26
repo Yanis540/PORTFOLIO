@@ -1,5 +1,4 @@
-import { IconName } from "@/icons/Icon"
-
+import {ExternalUrl} from "@/types"
 
 
 export type Project ={
@@ -7,16 +6,12 @@ export type Project ={
     description ?: string 
     resume : string 
     technologies:string[]
-    links :Link[]
+    links :ExternalUrl[]
   
     photo : string
 
 }
-type Link = {
-    title : string 
-    name:IconName , 
-    url: string
-} 
+
 
 
 const useProjects = ()=>{
@@ -36,7 +31,7 @@ const useProjects = ()=>{
             links : [
                 {title:"deployed",name:"external",url:"https://pfe-frontend-rose.vercel.app"},
             ],
-            photo:"/images/halcyon.avif"//"/images/face_recognition.jpg"
+            photo:"/images/face_recognition.jpg"
         },
         {
             title:"Chat Application ",

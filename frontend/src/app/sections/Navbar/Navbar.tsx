@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import NavbarItem from './components/NavbarItem';
 import {RxHamburgerMenu} from "react-icons/rx"
 import NavbarMobileMenu from './components/NavbarMobileMenu';
@@ -50,7 +50,7 @@ function Navbar({}:NavbarProps) {
     <>
         <nav className={clsx(
             "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200", 
-            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md":"backdrop-blur-lg shadow-b-lg",
+            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md":"backdrop-blur-lg shadow-b-sm",
         )}
         >
             <div className="flex flex-row items-center justify-between px-5 " >
