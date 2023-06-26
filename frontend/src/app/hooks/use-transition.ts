@@ -1,10 +1,9 @@
 import sr from "@/utils/sr";
-import { useEffect, MutableRefObject } from "react";
+import { useEffect, RefObject, useRef } from "react";
 import { config } from "@/config";
 import usePrefersReducedMotion from "./use-prefers-reduced-motion";
-import {forwardRef} from "react"
 
-const useTransition= (revealContainer:MutableRefObject<HTMLElement>)=>{
+const useTransition= (refContain:RefObject<HTMLElement>)=>{
     const prefersReducedMotion = usePrefersReducedMotion();
   
     useEffect(() => {
@@ -12,7 +11,7 @@ const useTransition= (revealContainer:MutableRefObject<HTMLElement>)=>{
         return;
       }
   
-      sr?.reveal(revealContainer.current!, config.srConfig());
+      sr?.reveal(refContain.current!, config.srConfig());
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prefersReducedMotion]);
 }

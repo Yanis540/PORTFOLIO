@@ -4,6 +4,8 @@ import { useIntersectionObserver } from '../hooks/use-intersection-observer';
 import HeaderSection from '@/app/components/Header/HeaderSection';
 import GeneralDescription from './components/GeneralDescription';
 import LottieAnimation from '@/app/components/Lottie/LottieAnimation';
+import { useRef } from 'react';
+import { useTransition } from '@/app/hooks/use-transition';
 
 interface AboutProps {
 
@@ -11,17 +13,12 @@ interface AboutProps {
 
 function About({}:AboutProps) {
 
-    const {ref,hasIntersected} = useIntersectionObserver();
+    // const {ref,hasIntersected} = useIntersectionObserver();
+    const ref = useRef<HTMLElement>(null);
+    useTransition(ref)
     return (
         <section ref={ref} id="about" className="h-full py-[100px] mx-auto flex flex-col justify-start mt-9 " >
-            <div  className={clsx(
-                `
-                    flex flex-col justify-center md:items-start gap-[20px]
-                    pl-0 md:pl-5 lg:pl-20 
-                    opacity-0 translate-y-0
-                `,
-                hasIntersected&&"opacity-100  animate-big-fade-in-bottom "
-            )}>
+            <div  className="flex flex-col justify-center md:items-start gap-[20px] pl-0 md:pl-5 lg:pl-20 ">
                 {/* Top  */}
                <HeaderSection  section_number={1} title="About me" /> 
                 {/*Bottom */}

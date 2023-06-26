@@ -1,19 +1,21 @@
-import React from 'react';
+'use client'
+import React, { useRef } from 'react';
 import { Project as ProjectType } from '../hooks/use-projects';
 import clsx from 'clsx';
 import Link from 'next/link';
 import Icon from '@/icons/Icon';
-import { useIntersectionObserver } from '../../hooks/use-intersection-observer';
+import { useTransition } from '@/app/hooks/use-transition';
 
 interface ProjectMobileProps {
     project:ProjectType
 };
 
 function ProjectMobile({project}:ProjectMobileProps) {
-    const {ref,hasIntersected} = useIntersectionObserver()
+    const ref = useRef<HTMLDivElement>(null);
+    useTransition(ref)
 
     return (
-        <div ref={ref} className={clsx(`flex md:hidden px-5 w-full relative`, hasIntersected && 'opacity-0 animate-fade-in-bottom')}>
+        <div ref={ref} className="flex md:hidden px-5 w-full relative">
             <div className="flex flex-col py-8 px-2  h-full w-full z-30 transition-all shadow-navy hover:shadow-lg duration-300 rounded">
                 <div className=" flex flex-col justify-center gap-[40px] h-full  px-4  ">
                     <div className="flex flex-col gap-[7px] ">

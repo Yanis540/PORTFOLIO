@@ -1,9 +1,10 @@
-import React from 'react';
+
+import React, { useRef } from 'react';
 import { Project as ProjectType} from '../hooks/use-projects';
 import clsx from 'clsx';
-import { useIntersectionObserver } from '../../hooks/use-intersection-observer';
 import Link from 'next/link';
 import Icon from '@/icons/Icon';
+import { useTransition } from '@/app/hooks/use-transition';
 
 interface ProjectDesktopProps {
     project: ProjectType 
@@ -11,14 +12,14 @@ interface ProjectDesktopProps {
 };
 
 function ProjectDesktop({project,left}:ProjectDesktopProps) {
-    const {ref,hasIntersected} = useIntersectionObserver()
+    const ref = useRef<HTMLDivElement>(null);
+    useTransition(ref)
 
     return (
         <div ref={ref} className={clsx(` 
             flex  h-full w-full relative  md:py-[20px]
             `,
             left== true ? 'flex-row':'flex-row-reverse', 
-            hasIntersected && 'opacity-0 animate-fade-in-bottom'
         )}>
             {/* Informations */}
             <div className={clsx(`md:flex-[0.5] hidden md:flex flex-col items-center justify-center z-30 my-[10px] `,
