@@ -6,7 +6,6 @@ const useBackground = ()=>{
     useEffect(() => {
       const updateMousePosition = (ev: MouseEvent) => {
         if (!heroRef.current) return;
-        console.log("here")
         const { screenX, screenY } = ev;
         heroRef.current.style.setProperty("--x", `${screenX}px`);
         heroRef.current.style.setProperty("--y", `${screenY}px`);

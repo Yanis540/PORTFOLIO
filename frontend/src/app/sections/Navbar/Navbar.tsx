@@ -7,6 +7,7 @@ import { useScroll } from './hooks/use-scroll';
 import clsx from 'clsx';
 import IconLogo from '@/icons/IconLogo';
 import {Link} from 'react-scroll';
+import { useRoutes } from './hooks/use-routes';
 
 interface NavbarProps {
 
@@ -22,35 +23,18 @@ export type Route = {
 function Navbar({}:NavbarProps) {
     const [showMobileView, setShowMobileView] = useState<boolean>(false);
     const toggleMobileMenu = ()=>setShowMobileView(!showMobileView);
-    const {hideNavbar} = useScroll();
-    const routes:Route[]=[
-        {
-            name:"About",
-            href:"about",
-            delay:80
-        },
-        {
-            name:"Education",
-            href:"education",
-            delay:100
-        },
-        {
-            name:"Projects",
-            href:"projects",
-            delay:150
-        },
-        {
-            name:"Contact",
-            href:"contact",
-            delay:200
-        },
-    ]
-
+    const {hideNavbar,lastScrollTop} = useScroll();
+    const routes = useRoutes();
     return (
     <>
         <nav className={clsx(
-            "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200", 
-            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-lg shadow-md":"backdrop-blur-lg shadow-b-sm",
+            "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200 ", 
+            "before:absolute before:w-full before:h-full before:bg-navy before:opacity-60", 
+            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-md":"backdrop-blur-lg ",
+            typeof window =="undefined"
+                ? "shadow-navy-shdow"
+                : lastScrollTop.current <= 250 
+                ?"" :"shadow-navy-shdow" 
         )}
         >
             <div className="flex flex-row items-center justify-between px-5 " >

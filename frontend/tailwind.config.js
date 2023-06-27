@@ -51,7 +51,7 @@ module.exports = {
         "greenish-blue":"#64ffda", 
       },
       boxShadow:{
-        'navy-shdow':'rgba(2,12,27,0.7);'
+        'navy-shdow':'0 10px 30px -10px rgba(2,12,27,0.7);'
       }
     },
   },

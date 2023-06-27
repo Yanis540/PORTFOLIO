@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useRef } from 'react'
 import Contact from './sections/Contact'
 import Education from './sections/Education/Education'
 import Navbar from './sections/Navbar/Navbar'
@@ -9,9 +8,15 @@ import { useBackground } from './hooks/use-background'
 import FooterLayout from './components/Layout/FooterLayout'
 import About from './sections/About/About'
 import { QueryClientProvider ,QueryClient} from '@tanstack/react-query'
+import Loader from './components/Loader/Loader'
 export default function Home() {
   const heroRef = useBackground()
   const queryClient = new QueryClient();
+  // return (
+  //   <div className="flex flex-col w-full min-h-screen h-full px-[10px] md:px-5 bg-navy relative max-w-[100vw] overflow-y-hidden">
+  //     <Loader /> 
+  //   </div>
+  // )
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-screen h-full px-[10px] md:px-5 bg-navy w-full relative max-w-[100vw] overflow-y-hidden">
