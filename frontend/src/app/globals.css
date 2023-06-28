@@ -65,6 +65,38 @@ svg .feather {
     text-transform: uppercase;
     transform: rotate(10deg) translateX(calc(var(--x) / 10, 0px));
 }
+path#logo-hexagon{
+    --strokeLength : 270.10827; 
+    --strokeCalc : 0 ; 
+    animation: hexagon 1s linear forwards;
+    stroke-dasharray:var(--strokeLength) ;/*270*/
+    stroke-dashoffset: var(--strokeLength);
+    width:0;
+}
+path#logo-y {
+    opacity:0;
+    animation : logo_y 1s linear forwards;
+    animation-delay: 2s;
+    transform-origin: center;
+    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);;
+}
+@keyframes hexagon {
+    0% {
+        stroke-dashoffset: var(--strokeLength);
+    }
+    100% {
+        stroke-dashoffset: var(--strokeCalc);
+    }
+}
+@keyframes logo_y {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 @layer base {
     :root {
       --color-primary: #dcff50;

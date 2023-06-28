@@ -12,16 +12,13 @@ const IconLogo = () => (
           L 89, 28 Z
         " 
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="transparent"
       />
     </g>
-    <g>
-      <path d="M35.413153,27L50,44.688027L63.237773,26.999999" transform="translate(.000001 0.000001)" fill="none" stroke="currentColor" strokeWidth="5"/>
-      <path d="M50.000001,44.688028L50,72.166825" fill="none" stroke="currentColor" strokeWidth="5"/>
-    </g>
+    <path d="M35.413153,27L50,44.688027L63.237773,26.999999L50,44.688028L50,72.166825" fill="none" stroke="currentColor" strokeWidth="5"/>
   </svg>
 
 );
