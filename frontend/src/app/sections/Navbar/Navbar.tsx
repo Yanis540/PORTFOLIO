@@ -29,7 +29,7 @@ function Navbar({}:NavbarProps) {
     <>
         <nav className={clsx(
             "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200 ", 
-            "before:absolute before:w-full before:h-full before:bg-navy before:opacity-60", 
+            "before:absolute before:w-full before:h-full before:bg-navy before:opacity-60 before:z-10", 
             hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-md":"backdrop-blur-lg ",
             typeof window =="undefined"
                 ? "shadow-navy-shdow"
@@ -37,9 +37,9 @@ function Navbar({}:NavbarProps) {
                 ?"" :"shadow-navy-shdow" 
         )}
         >
-            <div className="flex flex-row items-center justify-between px-5 " >
+            <div className="flex flex-row items-center justify-between px-5 z-10" >
                 {/* Logo */}
-                <Link to="hero"smooth={true} className="h-12 w-12 bg-transparent text-greenish-blue opacity-0 animate-mini-fade-in-bottom animation-delay-[50ms] cursor-pointer">
+                <Link to="hero"smooth={true} className="h-12 w-12 bg-transparent text-greenish-blue animate-mini-fade-in-bottom  cursor-pointer ">
                     <IconLogo /> 
                 </Link>
 

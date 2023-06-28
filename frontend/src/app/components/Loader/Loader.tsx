@@ -1,7 +1,5 @@
 'use client'
-import { useEffect , useState } from 'react';
 import LottieAnimation from '../Lottie/LottieAnimation';
-import { logoLoaderAnimationDelay, lottieLoaderAnimationDelay } from '@/utils';
 import clsx from 'clsx';
 import IconLoader from '@/icons/IconLoader';
 import { useAnimateLoader } from './hooks/use-animate-loader';
@@ -12,7 +10,7 @@ interface LoaderProps {
 function Loader({}:LoaderProps) {
     const {showLoaderAnimation,showLogoAnimation} = useAnimateLoader();
     return (
-        <div className="flex flex-col w-full h-screen px-[10px] md:px-5 bg-navy relative max-w-[100vw] overflow-y-hidden">
+        <div className="flex flex-col w-full h-screen py-5 px-5 mx-auto  bg-navy relative max-w-[100vw] overflow-y-hidden">
            {showLoaderAnimation&& (
             <div className='flex flex-col items-center h-full w-full relative'>
                 <LottieAnimation 
@@ -29,10 +27,13 @@ function Loader({}:LoaderProps) {
             {
                 (showLogoAnimation|| (!showLogoAnimation && !showLoaderAnimation))&& (
                 <div className={clsx(
-                    "flex flex-col items-center justify-center h-full w-full " ,
-                    !showLogoAnimation && !showLoaderAnimation && "  absolute top-0 left-0  -translate-x-[45%] -translate-y-[45%] scale-[0.4] transition-all opacity-0 duration-500 delay-500 "       
+                    "flex flex-col h-full w-full relative" ,
                 )}>
-                    <div className="text-greenish-blue w-[200px] h-[150px]    ">
+                    <div className={clsx(
+                        "absolute text-greenish-blue transition-all duration-500 delay-500", 
+                        (!showLogoAnimation && !showLoaderAnimation) ? "w-12 h-12 top-0 left-0 disppear-loader": "top-[50%] left-[calc(50%-100px)] w-[200px] h-[150px] "   // 64px == height of the navbar    
+
+                    )}>
                         <IconLoader /> 
                     </div>
                 </div>

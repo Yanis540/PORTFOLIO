@@ -24,13 +24,9 @@ export default function Home() {
         <Navbar /> 
         <main className="mx-auto px-1 sm:px-2 md:px-5 max-w-[1200px]">
           <Personnel /> 
-
           <About /> 
           <Education /> 
-          {/* Projects Section */}
           <Projects /> 
-          
-          {/* Contact Section */}
           <Contact /> 
         </main>
         <FooterLayout /> 

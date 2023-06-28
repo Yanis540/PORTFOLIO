@@ -97,6 +97,22 @@ path#logo-y {
         opacity: 1;
     }
 }
+.disppear-loader{
+    animation:disppear_loader 1s forwards ;
+    
+}
+@keyframes disppear_loader {
+    0% {
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @layer base {
     :root {
       --color-primary: #dcff50;
