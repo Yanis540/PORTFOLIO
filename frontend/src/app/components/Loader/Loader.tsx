@@ -31,7 +31,7 @@ function Loader({}:LoaderProps) {
                 )}>
                     <div className={clsx(
                         "absolute text-greenish-blue transition-all duration-500 delay-500", 
-                        (!showLogoAnimation && !showLoaderAnimation) ? "w-12 h-12 top-0 left-0 disppear-loader": "top-[50%] left-[calc(50%-100px)] w-[200px] h-[150px] "   // 64px == height of the navbar    
+                        (!showLogoAnimation && !showLoaderAnimation) ? "w-12 h-12 top-0 left-0 disppear-loader": "top-[calc(50%-75px)] left-[calc(50%-100px)] w-[200px] h-[150px] "   // 64px == height of the navbar    
 
                     )}>
                         <IconLoader /> 
