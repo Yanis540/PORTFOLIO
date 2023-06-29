@@ -4,7 +4,6 @@ import Button from '../components/Button/Button';
 interface PersonnelProps {
 
 };
-// -! Description about my self 
 function Personnel({}:PersonnelProps) {
     return (
         <section id="hero" className="h-screen mx-auto ">

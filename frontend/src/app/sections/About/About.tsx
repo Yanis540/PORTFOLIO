@@ -1,6 +1,4 @@
 'use client'
-import clsx from 'clsx';
-import { useIntersectionObserver } from '../hooks/use-intersection-observer';
 import HeaderSection from '@/app/components/Header/HeaderSection';
 import GeneralDescription from './components/GeneralDescription';
 import LottieAnimation from '@/app/components/Lottie/LottieAnimation';
@@ -13,7 +11,6 @@ interface AboutProps {
 
 function About({}:AboutProps) {
 
-    // const {ref,hasIntersected} = useIntersectionObserver();
     const ref = useRef<HTMLElement>(null);
     useTransition(ref)
     return (

@@ -5,11 +5,8 @@ import { Metadata } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata:Metadata = {
-  title: "Yanis",
+  title: "Yanis Tabellout",
   description: 'Yanis tabellout personnal portfolio',
-  icons:{
-    icon:'/kali.jpg'
-  }
 }
 
 export default function RootLayout({

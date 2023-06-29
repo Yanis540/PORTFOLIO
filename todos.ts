@@ -1,8 +1,12 @@
 /*
 
-!   -   Rework on transition by using the useTransition hook instead of useIntersectionObserver
-!   -   Do the animation stuff when the page loads :D 
-!   -   Add icons to link in the sides 
+!   - Try to make transitions betweens the different stats in education 
+
+
+!   -   Important
+?       -   Rework on transition by using the useTransition hook instead of useIntersectionObserver
+?       -   Do the animation stuff when the page loads :D 
+?       -   Add icons to link in the sides 
 !   -   FooterLayout : 
 ?       -   animate the footer layout more 
 !   -   Education page 
