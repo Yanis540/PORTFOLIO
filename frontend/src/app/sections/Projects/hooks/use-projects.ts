@@ -64,7 +64,7 @@ const useProjects = ()=>{
             `,
             technologies:["NextJs",'Next Auth',"Prisma",'PostgreSql'],
             links : [
-                {title:"Github Repo",name:"external",url:"https://next-js-e-commerce-pink-six.vercel.app"},
+                {title:"Github Repo",name:"external",url:"next-js-e-commerce-yanis540.vercel.app"},
             ],
             photo:"/images/e-commerce2.PNG"
             
