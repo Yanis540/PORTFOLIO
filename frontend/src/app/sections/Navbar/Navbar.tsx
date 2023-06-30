@@ -30,7 +30,9 @@ function Navbar({}:NavbarProps) {
         <nav className={clsx(
             "w-full z-40 fixed flex flex-col justify-center py-5 left-0 right-0 mx-auto h-[64px] rounded-b-sm transition-all duration-200 ", 
             "before:absolute before:w-full before:h-full before:bg-navy before:opacity-60 before:z-10", 
-            hideNavbar ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-md":"backdrop-blur-lg ",
+            hideNavbar 
+                ? "-translate-y-20 backdrop-brightness-75 backdrop-blur-md"
+                : lastScrollTop.current > 250&& "backdrop-blur-sm ",
             typeof window =="undefined"
                 ? "shadow-navy-shdow"
                 : lastScrollTop.current <= 250 
