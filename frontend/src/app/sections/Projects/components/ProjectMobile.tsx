@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import Icon from '@/icons/Icon';
 import { useTransition } from '@/app/hooks/use-transition';
+import ProjectTechnologies from './ProjectTechnologies';
 
 interface ProjectMobileProps {
     project:ProjectType
@@ -16,29 +17,26 @@ function ProjectMobile({project}:ProjectMobileProps) {
 
     return (
         <div ref={ref} className="flex md:hidden px-5 w-full relative">
+            {/* informations */}
             <div className="flex flex-col py-8 px-2  h-full w-full z-30 transition-all shadow-navy hover:shadow-lg duration-300 rounded">
                 <div className=" flex flex-col justify-center gap-[40px] h-full  px-4  ">
+                    {/* Project title */}
                     <div className="flex flex-col gap-[7px] ">
                         <h3 className="text-greenish-blue font-mono">Feature project</h3>
                         <h2 className="font-bold text-whitish text-2xl capitalize">{project.title}</h2>
                     </div>
+                    {/* Project Resume */}
                     <div className={clsx(`flex-flex-col w-full `,)}>
                         <p className="text-light-slate">{project.resume}</p>
                     </div>
-                    <div className="flex flex-col gap-[10px]">
-                        <div className={`w-full flex flex-row items-center justify-start gap-x-[10px] flex-wrap`}>
-                            {
-                                project.technologies.map((tech)=><span key={tech} className="text-lightest-slate capitalize py-1 text-sm " >{tech}</span> )
-                            }
-                        </div>
-                        {/* Links */}
-                        <div className="flex flex-row items-center justify-end gap-3">
-                            {project.links.map((link,index)=>(
-                                link.url && (
-                                    <Link key={index} target='_blank' href={link.url}><Icon name={link.name} />  </Link> 
-                                ) 
-                            ))}
-                        </div>
+                    {/* Links */}
+                    <div className="flex flex-row items-center justify-end gap-3">
+                    <ProjectTechnologies project={project} left={undefined} /> 
+                        {project.links.map((link,index)=>(
+                            link.url && (
+                                <Link key={index} target='_blank' href={link.url}><Icon name={link.name} />  </Link> 
+                            ) 
+                        ))}
                     </div>
                 </div>
             </div>

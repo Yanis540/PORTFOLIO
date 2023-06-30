@@ -8,8 +8,8 @@ interface GeneralDescriptionProps {
 function GeneralDescription({}:GeneralDescriptionProps) {
     const web_technologies_left = ['Javascript','Python','React','NodeJs','GraphQL','PostgreSql',"firebase"]
     const web_technologies_right = ['TypeScript','SQL','NextJs','Django','tRPC','MySql','Mongodb']
-    const ia_technologies_left = ['Tensorflow','Pytorch','Keras']
-    const ia_technologies_right = ['Scikit-learn','Pandas','Matplotlib']
+    const ia_technologies_left = ['Tensorflow','Matplotlib','Keras']
+    const ia_technologies_right = ['Pytorch','Pandas','Scikit-learn']
     return (
         <>
             {/* Bla bla about me  */}
@@ -29,7 +29,7 @@ function GeneralDescription({}:GeneralDescriptionProps) {
                     Here are some technologies i&apos;m familiar with :
                 </p>
                 {/*technologies  */}
-                <div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full md:items-center justify-around pl-8 md:pl-0">
+                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0 border">
                     {/* technologie left  */}
                     <div className="flex flex-col">
                         {
@@ -52,7 +52,7 @@ function GeneralDescription({}:GeneralDescriptionProps) {
                     mainly with : 
                 </p>
                 {/*  Technologies IA */}
-                <div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full md:items-center justify-around pl-8 md:pl-0">
+                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0 border">
                     {/* technologie left  */}
                     <div className="flex flex-col">
                         {

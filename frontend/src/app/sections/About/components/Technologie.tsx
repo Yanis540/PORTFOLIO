@@ -8,7 +8,7 @@ interface TechnologieProps {
 
 function Technologie({tech,center_triangle=true}:TechnologieProps) {
     return (
-        <div className={clsx("flex flex-row gap-2 relative",center_triangle?"items-center":"items-start ")}>
+        <div className={clsx("flex flex-row gap-2 relative ",center_triangle?"items-center":"items-start ")}>
             <div className={clsx("relative flex  flex-col items-center justify-center",!center_triangle&&"mt-2 ")}>
                 <div className="relative w-1 h-1
                 border-t-[5px] border-t-transparent

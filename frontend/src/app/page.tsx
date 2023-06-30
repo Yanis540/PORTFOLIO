@@ -19,8 +19,6 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col min-h-screen h-full px-[10px] md:px-5 bg-navy w-full relative max-w-[100vw] overflow-y-hidden">
-      {/* <div ref={heroRef} className="flex flex-col min-h-screen h-full px-5 bg-navy relative  hero "> */}
-
         <Navbar /> 
         <main className="mx-auto px-1 sm:px-2 md:px-5 max-w-[1200px]">
           <Personnel /> 
