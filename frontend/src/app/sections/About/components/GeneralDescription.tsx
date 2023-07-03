@@ -29,7 +29,7 @@ function GeneralDescription({}:GeneralDescriptionProps) {
                     Here are some technologies i&apos;m familiar with :
                 </p>
                 {/*technologies  */}
-                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0 border">
+                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0">
                     {/* technologie left  */}
                     <div className="flex flex-col">
                         {
@@ -52,7 +52,7 @@ function GeneralDescription({}:GeneralDescriptionProps) {
                     mainly with : 
                 </p>
                 {/*  Technologies IA */}
-                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0 border">
+                <div className="flex flex-col sm:flex-row items-start md:items-center justify-around gap-4 sm:gap-0 w-full pl-8 sm:pl-0">
                     {/* technologie left  */}
                     <div className="flex flex-col">
                         {
