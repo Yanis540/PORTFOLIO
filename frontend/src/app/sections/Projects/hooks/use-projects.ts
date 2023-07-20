@@ -60,7 +60,7 @@ const useProjects = ()=>{
         },
         {
             title:"E-commerce Mobile Application",
-            resume:`An E-commerce application, enables to login, select products to basket and set favorite products, purchase products and see orders`,
+            resume:`My first ever Mobile application that i did with learning React Native all along this project. It's An E-commerce application, enables to login, select products to basket and set favorite products, purchase products and see orders`,
             technologies:["React","React Native",'NodeJs',"Prisma","PostgreSql"],
             links : [
                 {title:"Github Repo",name:"github",url:"https://github.com/Yanis540/REACT-NATIVE-E-COMMERCE"},
