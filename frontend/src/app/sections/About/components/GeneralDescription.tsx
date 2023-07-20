@@ -6,8 +6,8 @@ interface GeneralDescriptionProps {
 };
 
 function GeneralDescription({}:GeneralDescriptionProps) {
-    const web_technologies_left = ['Javascript','Python','React','NodeJs','GraphQL','PostgreSql',"firebase"]
-    const web_technologies_right = ['TypeScript','SQL','NextJs','Django','tRPC','MySql','Mongodb']
+    const web_technologies_left = ['Javascript','Python','React',"Prisma",'NodeJs','GraphQL','PostgreSql',"firebase"]
+    const web_technologies_right = ['TypeScript','NextJs',"React Native",'Django','tRPC',"SQL",'MySql','Mongodb']
     const ia_technologies_left = ['Tensorflow','Matplotlib','Keras']
     const ia_technologies_right = ['Pytorch','Pandas','Scikit-learn']
     return (
@@ -19,11 +19,12 @@ function GeneralDescription({}:GeneralDescriptionProps) {
                 <p className="text-slate">
                     Hello! My name is Yanis and I enjoy creating things that are IT related. 
                     My interest in <span className="text-greenish-blue mr-1">development and web development</span> started back in 2020 when My big brother introduced me to the world of HTML and CSS and Javascript and i completly fell 
-                    in love with coding in general.
+                    in love with coding in general. I also started to have a little more interest in mobile development which is growing exponentially in recent years. 
                 </p>
                 <p className="text-slate">
-                    I had the previlige to study in one of the most prestigious universities in Algeria which is <span className="text-greenish-blue mr-1" >USTHB</span>
-                    and finished my bachelor degree in Software engineering as the <span className="text-greenish-blue">valedictorian</span>.
+                    I also had the privilege to study at one of the most prestigious universities in Algeria which is <span className="text-greenish-blue mr-1" >USTHB</span>
+                    and finished as <span className="text-greenish-blue mr-1">valedictorian</span> in my bachelor&apos;s degree in <span className="text-greenish-blue mr-1">Software engineering.</span>
+                    I&apos;m also currently continuing my master&apos;s degree in computer science in one of the most illustrious university in the world <span className="text-greenish-blue mr-1">Sorbonne University.</span>
                 </p>
                 <p className="text-slate">
                     Here are some technologies i&apos;m familiar with :

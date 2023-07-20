@@ -59,6 +59,17 @@ const useProjects = ()=>{
 
         },
         {
+            title:"E-commerce Mobile Application",
+            resume:`An E-commerce application, enables to login, select products to basket and set favorite products, purchase products and see orders`,
+            technologies:["React","React Native",'NodeJs',"Prisma","PostgreSql"],
+            links : [
+                {title:"Github Repo",name:"github",url:"https://github.com/Yanis540/REACT-NATIVE-E-COMMERCE"},
+
+            ],
+            photo:"/images/e-commerce-app.PNG"
+
+        },
+        {
             title:"E-commerce website",
             resume:`An online store using the latest technologies. The goal of this project was to familiarize with the NextJS environment  
             `,
