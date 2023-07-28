@@ -14,11 +14,12 @@ interface EducationProps {
 
 // - Eduationnal background // INSPIRE BY this : https://v4.brittanychiang.com (0.2 where i have worked )
 function Education({}:EducationProps) {
+    
     const ref = useRef<HTMLElement>(null);
     const [contents,setContent] = useEducation(); 
     const activeContent = useMemo(()=>{
         return contents.find((content)=>content.active)!
-    },[contents])
+    },[contents]); 
     const handleCurrentActive = (content:EducationalContent,e:MouseEvent<HTMLElement>)=>{
         if(content.active)
             return ; 
@@ -26,6 +27,7 @@ function Education({}:EducationProps) {
         return ;
     }
     useTransition(ref)
+
     return (
         <section ref={ref} id="education" className="h-full py-[100px] mx-auto flex flex-col justify-start" >
             <div   className=" flex flex-col justify-center md:items-start gap-[40px] py-4 pl-0 md:pl-20 lg:pl-40">
