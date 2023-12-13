@@ -34,6 +34,17 @@ const useProjects = ()=>{
             photo:"/images/face_recognition.jpg"
         },
         {
+            title:"Uber Clone ",
+            resume : `A Uber clone using real time communication, features the driver side and the client side ith a rating system for users and or drivers ! `,
+            description:`
+            `,
+            technologies:["TypeScript","React Native","NodeJs & Express","Prisma","PostgresSql", "Socket.IO",'TailWindCss'],
+            links : [
+                {title:"Github Repo",name:"github",url:"https://github.com/Yanis540/UBER_CLONE"},
+            ],
+            photo:"/images/uber.PNG"
+        },
+        {
             title:"Chat Application ",
             resume : `Chat application that enabled users to login, send messages, and share images in group chats.`,
             description:`One of my oldest projects ! A Chat application allowing authenticated users to login, add and send messages, create group messages and send images. 
