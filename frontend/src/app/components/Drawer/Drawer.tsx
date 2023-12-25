@@ -1,11 +1,12 @@
 'use client'
 import { Transition , Dialog } from '@headlessui/react';
-import React from "react"
+import React, { useRef } from "react"
 import { format } from 'date-fns';
 import { IoClose } from 'react-icons/io5';
 
 import {ReactNode} from "react"
 import clsx from 'clsx';
+import { useOnClickOutside } from '@/app/hooks/use-on-click-oustide';
 interface DrawerProps {
   isOpen : boolean 
   onClose : ()=>void
@@ -14,13 +15,14 @@ interface DrawerProps {
 };
 
 function Drawer({children,isOpen,onClose,left}:DrawerProps) {
-    
+    const ref = useRef<HTMLDivElement|null>(null);
+    useOnClickOutside(ref,()=>onClose);
     
     return (
         <>
             
             <Transition.Root show ={isOpen}as={React.Fragment}>
-                <Dialog as="div"className="relative z-[100]  " onClose={onClose}>
+                <Dialog as="div"className="relative z-[100] " onClose={onClose}>
                     <Transition.Child 
                         as={React.Fragment} 
                         enter ="ease-out duration-500"
@@ -49,7 +51,7 @@ function Drawer({children,isOpen,onClose,left}:DrawerProps) {
                                     leaveTo={left?"-translate-x-full":"translate-x-full"}
                                 >
                                     <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                                        <div className="flex h-full flex-col  bg-navy py-6 shadow-xl ">
+                                        <div className="flex h-full flex-col  bg-navy py-6 shadow-xl " ref={ref}>
                                             <div className="px-4 sm:px-6">
                                                 <div className="flex items-start justify-end">
                                                     <div className="ml-3 h-7 flex items-center">

@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import NavbarItem from './components/NavbarItem';
 import {RxHamburgerMenu} from "react-icons/rx"
 import NavbarMobileMenu from './components/NavbarMobileMenu';
@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import IconLogo from '@/icons/IconLogo';
 import {Link} from 'react-scroll';
 import { useRoutes } from './hooks/use-routes';
+import { useOnClickOutside } from '@/app/hooks/use-on-click-oustide';
 
 interface NavbarProps {
 

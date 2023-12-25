@@ -13,7 +13,11 @@ function Personnel({}:PersonnelProps) {
                     <span className=" text-greenish-blue text-md font-bold opacity-0 animate-fade-in-bottom animation-delay-[200ms]">Hi, my name is </span>
                     <h1 className="text-lightest-slate text-[2.8rem] md:text-[5rem] lg:text-8xl xl:text-12xl font-bold opacity-0 animate-fade-in-bottom animation-delay-[250ms] ">Yanis Tabellout.</h1>
                     <h2 className="text-slate text-[2rem] md:text-[5rem] lg:text-8xl xl:text-12xl font-bold opacity-0 animate-fade-in-bottom animation-delay-[300ms]">Passionate about computers.</h2>
-                    <p className="text-slate drop-shadow-sm	 lg:max-w-[50%] opacity-0 animate-fade-in-bottom animation-delay-[400ms]">I&apos;m an algerian full stack web, recently graduated from the prestigious university of USTHB with a bachelor degree in <span className='text-greenish-blue' >computer science</span>, precisly in <span className="text-greenish-blue"> software enginnering</span> and information systems engineering </p>
+                    <p className="text-slate drop-shadow-sm	 lg:max-w-[50%] opacity-0 animate-fade-in-bottom animation-delay-[400ms]">
+                        I&apos;m an algerian full stack web, Master&apos;s degree <span className="text-greenish-blue"> software engineering</span>  student at 
+                        <span className="text-greenish-blue"> Sorbonne university</span>.  Recently graduated from the prestigious university of USTHB with a bachelor degree in 
+                        <span className='text-greenish-blue' > computer science</span>.
+                    </p>
                     <div className='relative group opacity-0 animate-fade-in-bottom animation-delay-[500ms]'>
                         <Link to="about" smooth={true}>
                             <Button className="
