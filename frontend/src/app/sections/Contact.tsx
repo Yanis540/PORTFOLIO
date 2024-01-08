@@ -51,9 +51,9 @@ function Contact({}:ContactProps) {
                 }
             </div>
             <div className="">
-                <span className="flex flex-col items-center text-slate text-md font-mono">
+                <span className="flex flex-col items-center text-greenish-blue text-md font-mono">
                     Built by Yanis Tabellout 
-                    <span className="text-xs text-greenish-blue">(inspired from Brittany Chiang)
+                    <span className="text-xs  text-slate">(inspired from Brittany Chiang)
                     </span> 
                 </span>
             </div>
