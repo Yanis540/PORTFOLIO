@@ -25,10 +25,10 @@ function FooterLayout({}:FooterLayoutProps) {
            <div className="flex flex-col items-center relative group"> 
                 {/* Links */}
                 <div className={clsx(`
-                    flex flex-col gap-[40px] items-center mb-[20px] relative `,
-                    !isMobile && `translate-y-full opacity-0 group-hover:translate-y-0 
-                        group-hover:opacity-100 transition-all duration-[800ms] ease-in 
-                        pointer-events-none group-hover:pointer-events-auto`,
+                    flex flex-col gap-[40px] items-center mb-[40px] relative `,
+                    !isMobile && `translate-y-0 
+                        opacity-100 transition-all duration-[800ms] ease-in 
+                        pointer-events-auto`,
                 )}>
                     {
                         config.socialLinks.map((link)=>(
@@ -40,21 +40,10 @@ function FooterLayout({}:FooterLayoutProps) {
                 <div className={clsx(`
                         flex flex-col items-center 
                     `,
-                    !isMobile && `opacity-0 scale-y-0 group-hover:scale-y-[100%] group-hover:opacity-100 transition-all origin-bottom duration-800
-                        pointer-events-none group-hover:pointer-events-auto`
+                    !isMobile && ` scale-y-[100%] opacity-100 transition-all origin-bottom duration-800 pointer-events-none `
                 )}>
                     <div className="border-[0.1px] border-greenish-blue h-32 w-[0.1px] rounded-sm"></div>
                 </div>
-                {/* Circle */}
-                {
-                    !isMobile  && (
-                    <div className='flex flex-col items-center w-full absolute bottom-0 right-0 mx-auto text-greenish-blue 
-                        translate-y-[-50%] group-hover:scale-[0.8] group-hover:bottom-full animate-bounce group-hover:animate-none transition-all duration-300ms pointer-events-none
-                    '>
-                        <FaCircle size={24} /> 
-                    </div>
-                    )
-                }
        
            </div>
         </div>
