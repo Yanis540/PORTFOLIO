@@ -12,7 +12,7 @@ interface ContactProps {
 function Contact({}:ContactProps) {
     const isMobile = useMobile();
     return (
-        <section className="flex flex-col items-center py-8 mx-auto gap-4 max-w-[600px] ">
+        <section id="contact" className="flex flex-col items-center py-8 mx-auto gap-4 max-w-[600px] ">
             <div className="flex flex-col items-center gap-[30px] ">
                 <h5 className="font-mono text-greenish-blue">4. What&apos;s next ? </h5>
                 <h2 className="capitalize text-4xl md:text-[4rem] text-whitish font-bold ">Get in touch</h2>

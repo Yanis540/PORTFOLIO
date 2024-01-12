@@ -14,7 +14,7 @@ function Projects({}:ProjectsProps) {
     const {ref,hasIntersected} = useIntersectionObserver();
     const projects = useProjects();
     return (
-        <section ref={ref} id="about" className="h-full py-[100px] mx-auto flex flex-col justify-start mt-9 " >
+        <section ref={ref} id="projects" className="h-full py-[100px] mx-auto flex flex-col justify-start mt-9 " >
             <div  className={clsx(
                 `
                     flex flex-col justify-center md:items-start gap-[20px]
