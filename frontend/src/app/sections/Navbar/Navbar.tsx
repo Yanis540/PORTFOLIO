@@ -17,7 +17,8 @@ interface NavbarProps {
 export type Route = {
     name:string 
     href: string
-    delay:number
+    delay:number, 
+    resume ? : boolean 
 }
 // Navbar : 
 // - hide when ur scrolling down 

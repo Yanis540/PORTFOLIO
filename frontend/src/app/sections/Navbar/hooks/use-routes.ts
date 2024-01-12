@@ -21,7 +21,13 @@ const useRoutes = ()=>{
         {
             name:"Contact",
             href:"contact",
-            delay:200
+            delay:200,
+        },
+        {
+            name:"Resume",
+            href:`${process.env.NEXT_PUBLIC_SERVER_URL}/cv/resume.pdf`,
+            delay:250,
+            resume:true
         },
     ]
     return routes; 
