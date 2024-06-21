@@ -19,8 +19,8 @@ function EducationContent({activeContent}:EducationContentProps) {
                         text-greenish-blue relative 
                         link link-underline link-underline-black
                     ">
-                        <Link href="https://www.usthb.dz" >
-                        @{activeContent.location}
+                        <Link target='_blank' href={activeContent.location.url} >
+                        @{activeContent.location.name}
                         </Link>
                     </span>
                 </h2>

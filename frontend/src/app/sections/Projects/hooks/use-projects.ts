@@ -45,6 +45,17 @@ const useProjects = ()=>{
             photo:"/images/uber.PNG"
         },
         {
+            title:"Micro Hack ",
+            resume : `A website for MicroClub's hackthon called Micro hack. Allowing to register people and added a admin dashboard!`,
+            description:`
+            `,
+            technologies:["TypeScript","React","NextJs","Prisma","PostgresSql", "Gsap",'TailWindCss'],
+            links : [
+                {title:"Github Repo",name:"external",url:"https://mc-hack-website-moussaabbadlas-projects.vercel.app/"},
+            ],
+            photo:"/images/micro-hack.PNG"
+        },
+        {
             title:"Chat Application ",
             resume : `Chat application that enabled users to login, send messages, and share images in group chats.`,
             description:`One of my oldest projects ! A Chat application allowing authenticated users to login, add and send messages, create group messages and send images. 

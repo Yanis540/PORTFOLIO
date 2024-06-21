@@ -40,7 +40,7 @@ const EducationSidebar = (({handleCurrentActive,contents   }:EducationSidebarPro
 
                                 )}
                             >
-                                {content.degree}{` ${content.id['1']}`}
+                                {content.degree}
                             </h3>
                         ))
                     }
