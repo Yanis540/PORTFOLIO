@@ -1,24 +1,15 @@
 
 
-import { loaderDelay } from "@/utils";
-import {useState , useEffect} from "react"
 
-const useLoader = ()=>{
-
-    const [showLoader,setShowLoader] = useState<boolean>(true);
-    useEffect(()=>{
-        if(typeof window !="undefined"){
-            const timeout = setTimeout(()=>{
-                setShowLoader(false);
-            },loaderDelay)
-
-            return ()=>clearTimeout(timeout);
-        }
-    },[])
-
-    return showLoader;
-
-}
+import { create } from 'zustand'
+interface LoaderState {
+    show_loader?:  boolean
+    set_show_loader: (isLoading?: boolean) => void
+  }
+const useLoader =  create<LoaderState>((set,prev) => ({
+    show_loader: true,
+    set_show_loader: (isLoading?:boolean) => set({ show_loader:isLoading }),
+}))
 
 
 export {

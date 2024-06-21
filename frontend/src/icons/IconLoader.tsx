@@ -1,17 +1,6 @@
 'use client'
-import {useEffect} from 'react';
 
 const IconLoader = () => {
-  
-  useEffect(()=>{
-    if(typeof document !="undefined"){
-      const hexagon = (document.querySelector("hexagon")! )as SVGPathElement;
-      const strokeLength = hexagon?.getTotalLength() ; 
-      hexagon?.style?.setProperty('--strokeLength',`${strokeLength}`);
-    }
-  },[])
-  if(typeof document =="undefined")
-    return null ; 
   return (
   <>
 

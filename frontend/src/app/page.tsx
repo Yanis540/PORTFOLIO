@@ -13,8 +13,8 @@ import { useLoader } from './hooks/use-loader'
 export default function Home() {
   const heroRef = useBackground()
   const queryClient = new QueryClient();
-  const showLoader = useLoader();
-  if(showLoader)
+  const {show_loader} = useLoader();
+  if(show_loader)
     return <Loader />;
   return (
     <QueryClientProvider client={queryClient}>

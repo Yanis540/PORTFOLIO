@@ -67,19 +67,22 @@ svg .feather {
 }
 path#logo-hexagon{
     --strokeLength : 270.10827; 
-    --strokeCalc : 0 ; 
-    animation: hexagon 1s linear forwards;
-    stroke-dasharray:var(--strokeLength) ;/*270*/
+    /* --strokeCalc : 0 ;  */
+    /* animation: hexagon 1s linear forwards; */
+    /* stroke-dasharray:var(--strokeLength) ; */
+    /*270*/
     stroke-dashoffset: var(--strokeLength);
-    width:0;
+    /* width:0; */
 }
 path#logo-y {
     opacity:0;
-    animation : logo_y 1s linear forwards;
-    animation-delay: 2s;
-    transform-origin: center;
-    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);;
+    /* animation : logo_y 1s linear forwards; */
+    /* animation-delay: 0s; */
+    /* transform-origin: center; */
+    /* box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);; */
 }
+
+/*
 @keyframes hexagon {
     0% {
         stroke-dashoffset: var(--strokeLength);
@@ -97,6 +100,7 @@ path#logo-y {
         opacity: 1;
     }
 }
+
 .disppear-loader{
     animation:disppear_loader 1s forwards ;
     
@@ -112,7 +116,7 @@ path#logo-y {
         opacity: 0;
     }
 }
-
+*/
 @layer base {
     :root {
       --color-primary: #dcff50;
