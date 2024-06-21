@@ -15,7 +15,11 @@ function ProjectTechnologies({project,left}:ProjectTechnologiesProps) {
                 (left == true || left == undefined)?'justify-start' : 'justify-end'
             )}>
                 {
-                    project.technologies.map((tech)=><span key={tech} className="text-teal-300 px-2 py-1 rounded-lg bg-teal-400/10 capitalize text-sm " >{tech}</span> )
+                    project.technologies.map((tech)=>(
+                        <span key={tech} className="text-teal-300 hover:text-teal-200 transition-all duration-500 px-2 py-1 rounded-lg bg-teal-400/10 hover:bg-teal-400/20 capitalize text-sm " >
+                            {tech}
+                        </span>
+                    ))
                 }
             </div>
         </div>
