@@ -51,7 +51,7 @@ const useProjects = ()=>{
             `,
             technologies:["TypeScript","React","NextJs","Prisma","PostgresSql", "Gsap",'TailWindCss'],
             links : [
-                {title:"Github Repo",name:"external",url:"https://mc-hack-website-moussaabbadlas-projects.vercel.app/"},
+                {title:"Github Repo",name:"external",url:"https://microhack.microclub.info/"},
             ],
             photo:"/images/micro-hack.PNG"
         },
