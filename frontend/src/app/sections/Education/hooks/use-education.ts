@@ -17,9 +17,38 @@ export type EducationalContent = {
 type EducationContentId = "licence" | "master"
 
 const useEducation :() => ([EducationalContent[] , ((contentId: EducationContentId) => void)])= ()=>{
-    const [selectedContent,setSelectedContent] = useState<EducationContentId>("licence");
+    const [selectedContent,setSelectedContent] = useState<EducationContentId>("master");
     const setContent = (contentId:EducationContentId)=>setSelectedContent(contentId)
     const contents :EducationalContent[]= [
+        {
+            id:"master",
+            year:"Second", 
+            degree:"Master's",
+            field:"Software Enginnering",
+            location:{
+                name:"Sorbonne University",
+                url:"https://www.sorbonne-universite.fr/#Sciences%20&%20Ing%C3%A9nierie"
+            },
+            started_date:"August 2023",
+            end_date:"September 2025",
+            delivered : [
+                "Mastered advanced algorithms and data structures, with a focus on trees and compression algorithms.",
+                "Learned and practiced several programming languages: OCaml, Golang, Haskell.",
+                "Designed and implemented a programming language using Java and ANTLR (ILP).",
+                "Created another language using OCaml and Prolog (APS).",
+                "Built a basic chat website using Golang with low-level HTTP handlers and WebSocket handshake.",
+                "Studied and applied advanced querying techniques for XML (XSchema, XPath), JSON Schema, N1QL, RDF, and SPARQL.",
+                "Developed a 2D game entirely in Haskell.", 
+                "Conducted research on automatic repair of invalid JSON instances according to a given JSON Schema.", 
+                "Programmed autonomous robots for battle simulations and strategy optimization.",
+                "Developed a custom search engine using graph algorithms such as Google's PageRank, closeness centrality, and betweenness centrality.",
+                "Used the LiSA (Library for Static Analysis) framework to implement static analyzers based on abstract interpretation.",
+                "Built a distributed musical orchestra system with Akka and Scala, integrating a complex event-driven architecture and an election system.",
+                "Led a team of 5 in building a Minimum Viable Product (MVP), ensuring both technical and organizational success.",
+                "Implemented an evaluator and a type inference system, including a Prolog-based type checker and a lexer/parser of a Lambda calculus language (TAS)."
+            ], 
+            active: "master" == selectedContent
+        }, 
         {
             id:"licence",
             year:"Third", 
@@ -47,29 +76,7 @@ const useEducation :() => ([EducationalContent[] , ((contentId: EducationContent
             ], 
             active: "licence" == selectedContent
         }, 
-        {
-            id:"master",
-            year:"Second", 
-            degree:"Master's",
-            field:"Software Enginnering",
-            location:{
-                name:"Sorbonne University",
-                url:"https://www.sorbonne-universite.fr/#Sciences%20&%20Ing%C3%A9nierie"
-            },
-            started_date:"August 2023",
-            end_date:"September 2025",
-            delivered : [
-                "Adavanced algorithms and data structures mostly trees and compression algorithms",
-                "Learned a bunch of programming such as Ocaml, Golang, Haskell",
-                "Creating our programming language using Java and ANTLR called ILP",
-                "Creating our programming language using Ocaml and Prolog called APS",
-                "Implementing a chat website using basic HTTP handlers and socket handshake using Golang",
-                "Studied on new ways to query XML and Xschema and Xpath, Json schema and N1QL , RDF and SPARQL",
-                "Implemented a 2D game using haskell", 
-                "Conducted a research on new way to fix a json instance that is invalid to a certain Json schema", 
-            ], 
-            active: "master" == selectedContent
-        }, 
+
     ]
     return [contents,setContent]
 }
