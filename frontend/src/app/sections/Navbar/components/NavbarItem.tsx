@@ -12,7 +12,7 @@ interface NavbarItemProps {
 function NavbarItem({route,index}:NavbarItemProps) {
     if(route.resume)
     return (
-        <a href={route.href} download="resume.pdf" className={clsx("flex flex-row font-mono items-center text-md gap-2 opacity-0 translate-y-0 animate-mini-fade-in-top ","text-white animation-delay-[250ms]")}>
+        <a href={"#"}  className={clsx("flex flex-row font-mono items-center text-md gap-2 opacity-0 translate-y-0 animate-mini-fade-in-top ","text-white animation-delay-[250ms]")}>
             <h2 className="
                 hover:text-greenish-blue 
                 cursor-pointer text-sm font-light  animation-delay-100 rounded-lg"
